@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bazuze | Settings</title>
+        <link rel="icon" href="favicon.ico" />
+        
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!-- Font-Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/settings.css"/>
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="above-nav">Helpline: +234 (0) 809 098 8987</div>
+
+        <!-- Navbar Starts Here -->
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="images/logo.png" />
+                <p>Bazuze</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><img class="open-nav" src="images/menu.png"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample08">
+                <ul class="navbar-nav mr-auto"></ul>
+
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item">
+                        <a href="index.html" class="links">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="links">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="produce-shop.html" class="links">Produce shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="help.html" class="links">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="links help-link">Cart <img src="images/cart.png"></a>
+                    </li>
+                    
+                    <li class="nav-item dropdown user">
+                        <a class="nav-link" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="username"><img src="images/user-img.png">Chukwuemeka<i class="fas fa-chevron-down"></i></p>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown08">
+                            <a class="dropdown-item" href="dashboard.html">Dashboard</a>
+                            <hr>
+                            <a class="dropdown-item" href="sign-in.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navbar Ends Here -->
+
+        <div class="layout">
+            <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
+            <div class="sidenav" id="mySidenav">
+
+                <!-- Click on x in mobile view to close the sidenav -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                <div class="inn">
+                    <div class="top">
+                        <img src="images/user-img.png">
+                        <p>Member since</p>
+                        <h5>April 2019</h5>
+                    </div>
+
+                    <hr>
+
+                    <div class="bottom">
+                        <p class="link">
+                            <a href="dashboard.html">
+                                <i class="far fa-chart-bar"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </p>
+                        <p class="link">
+                            <a href="produce-following.html">
+                                <i class="far fa-check-circle"></i>
+                                <span>Produce Following</span>
+                            </a>
+                        </p>
+                        <p class="link">
+                            <a href="" class="non-responsive-link" data-toggle="modal" data-target="#accountOfficerModal">
+                                <i class="far fa-user"></i>
+                                <span>Account Officer</span>
+                            </a>
+                            <a href="" class="responsive-link" onclick="closeNav()" data-toggle="modal" data-target="#accountOfficerModal">
+                                <i class="far fa-user"></i>
+                                <span>Account Officer</span>
+                            </a>
+                        </p>
+                        <p class="link">
+                            <a href="settings.html" class="active">
+                                <i class="fas fa-cog"></i>
+                                <span>Profile Settings</span>
+                            </a>
+                        </p>
+                        <p class="link">
+                            <a href="" class="non-responsive-link" data-toggle="modal" data-target="#passwordModal">
+                                <i class="fas fa-lock"></i>
+                                <span>Password Settings</span>
+                            </a>
+                            <a href="" class="responsive-link" onclick="closeNav()" data-toggle="modal" data-target="#passwordModal">
+                                <i class="fas fa-lock"></i>
+                                <span>Password Settings</span>
+                            </a>
+                        </p>
+                        <p class="link">
+                            <a href="sign-in.html">
+                                <i class="fas fa-power-off"></i>
+                                <span>Log Out</span>
+                            </a>
+                        </p>
+                    </div>
+
+                    <!-- Account Officer Modal -->
+                    <div class="modal fade question new-user" id="accountOfficerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="images/tab-img.png">
+                                    <h5>Peter Okafor Obinna</h5>
+                                    <div class="phone-div">08099098909, 09087564893</div>
+
+                                    <p>Send a message across</p>
+                                    <form class="form">
+                                        <div class="form-group">
+                                            <textarea rows="6" placeholder="Type your message here" required></textarea>
+                                        </div>
+                                        <button class="btn send-btn">Send Message</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Password Modal -->
+                    <div class="modal fade question new-user" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header password-header">
+                                    <span>Password Settings</span>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form password-form">
+                                        <div class="form-group">
+                                            <label>Old password</label>
+                                            <input type="password" class="form-control" placeholder="Enter old password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>New password</label>
+                                            <input type="password" class="form-control" placeholder="Enter new password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Confirm password</label>
+                                            <input type="password" class="form-control" placeholder="Confirm new password" required>
+                                        </div>
+                                        <button class="btn confirm-btn">CONFIRM PASSWORD CHANGE</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>  
+            <!-- Sidebar Navigation Ends Here -->
+
+            <!-- Main Page Content Starts Here -->
+            <div class="main" id="main">
+                
+                <div id="overlay"></div>
+
+                <!-- Use fa-bar on mobile view to open the sidenav -->
+                <span onclick="openNav()" class="open-sidenav"><img src="images/menu.png"></span>
+
+                <div class="main-page-content">
+
+                    <br><br>
+                    <p class="info-text">PROFILE SETTINGS</p>
+                    <p class="you-currently">Update your personal and other informations.</p>
+
+                    <div class="info-box">
+
+                        <nav class="navigation">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-one" href="#personal" role="tab" aria-controls="nav-one" aria-selected="true">
+                                    <h6>1</h6>
+                                    <p>Personal Details</p>
+                                </a>
+                                <a class="nav-item nav-link" id="nav-two" href="#contact" role="tab" aria-controls="nav-two" aria-selected="false">
+                                    <h6>2</h6>
+                                    <p>Contact Details</p>
+                                </a>
+                                <a class="nav-item nav-link" id="nav-three" href="#bank" role="tab" aria-controls="nav-three" aria-selected="false">
+                                    <h6>3</h6>
+                                    <p>Bank Details</p>
+                                </a>
+                                <a class="nav-item nav-link last" id="nav-four" href="#kin" role="tab" aria-controls="nav-four" aria-selected="false">
+                                    <h6>4</h6>
+                                    <p>Next of Kin</p>
+                                </a>
+                            </div>
+                        </nav>
+
+                        <div class="section" id="personal">
+                            <div class="section-header">
+                                <h5>Personal Details</h5>
+                                <button class="edit-btn">Edit</button>
+                            </div>
+                            <form class="form">
+                                <div class="form-group">
+                                    <label>Full Name <em>(Important)</em></label>
+                                    <input type="name" class="form-control">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-6">
+                                        <label>Date of Birth <em>(Important)</em></label>
+                                        <!-- Calendar Here -->
+                                        <select class="custom-select">
+                                            <option value="1">Mon 21 Apr, 2019</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Gender <em>(Important)</em></label>
+                                        <select class="custom-select">
+                                            <option value="1">Male</option>
+                                            <option value="2">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-6">
+                                        <label>Email <em>(Important)</em></label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Phone Number <em>(Important)</em></label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-6">
+                                        <label>Nationality</label>
+                                        <select class="custom-select date-select">
+                                            <option value="1">Nigerian</option>
+                                            <option value="2">Senegalese</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Occupation <em>(Important)</em></label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="section" id="contact">
+                            <div class="section-header">
+                                <h5>Contact Details</h5>
+                                <button class="edit-btn">Save changes</button>
+                            </div>
+                            <form class="form">
+                                <div class="form-group">
+                                    <label>Address <em>(Important)</em></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-6">
+                                        <label>Country <em>(Important)</em></label>
+                                        <select class="custom-select">
+                                            <option value="1">Nigeria</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>State / province / region <em>(Important)</em></label>
+                                        <select class="custom-select">
+                                            <option value="1">Lagos</option>
+                                            <option value="2">Taraba</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-6">
+                                        <label>City <em>(Important)</em></label>
+                                        <select class="custom-select">
+                                            <option value="1">Apapa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="section" id="bank">
+                            <div class="section-header">
+                                <h5>Bank Details</h5>
+                                <button class="edit-btn">Edit</button>
+                            </div>
+                            <form class="form">
+                                <div class="form-group">
+                                    <label>Account Name <em>(Important)</em></label>
+                                    <input type="name" class="form-control">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-6">
+                                        <label>Account Number <em>(Important)</em></label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Bank Name <em>(Important)</em></label>
+                                        <select class="custom-select">
+                                            <option value="1">First Bank</option>
+                                            <option value="2">Guaranty Trust Bank</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="section" id="kin">
+                            <div class="section-header">
+                                <h5>Next of Kin</h5>
+                                <button class="edit-btn">Edit</button>
+                            </div>
+                            <form class="form">
+                                <div class="form-group">
+                                    <label>Full Name <em>(Important)</em></label>
+                                    <input type="name" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Address <em>(Important)</em></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-6">
+                                        <label>Email <em>(Important)</em></label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Phone Number <em>(Important)</em></label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-6">
+                                        <label>Relationship <em>(Important)</em></label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+                    
+            </div>
+        </div>
+
+        <footer>
+
+            <div class="columns-row">
+                <div class="columns">
+                    <p class="footer-link-header-text">Company</p>
+                    <div class="footer-links">
+                        <p><a href="about.html" class="link">About Us</a></p>
+                        <p><a href="https://blog.bazuze.com" class="link">Blog</a></p>
+                        <p><a href="faq.html" class="link">FAQs</a></p>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <p class="footer-link-header-text">Legal</p>
+                    <div class="footer-links">
+                        <p><a href="#" class="link">Privacy Policy</a></p>
+                        <p><a href="#" class="link">Terms</a></p>
+                        <p><a href="#" class="link">Disclaimer</a></p>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <p class="footer-link-header-text">Contact</p>
+                    <div class="footer-links">
+                        <p>info@bazuze.com</p>
+                        <p>+2347097898787</p>
+                    </div>
+                    <div class="links-icon-row">
+                        <a href="" class="link"><i class="fab fa-facebook-square"></i></a>
+                        <a href="" class="link"><i class="fab fa-instagram"></i></a>
+                        <a href="" class="link"><i class="fab fa-twitter-square"></i></a>
+                        <a href="" class="link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <p class="footer-link-header-text">Coming soon</p>
+                    <div class="footer-links">
+                        <a href="" class="img-link">
+                            <img src="images/google-play.png">
+                        </a>
+                        <br>
+                        <a href="" class="img-link">
+                            <img src="images/app-store.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-nav">
+                <p class="copyright-text">© 2019 Bazuze . All rights reserved</p>
+            </div>
+
+        </footer>
+
+        <!-- Main Page Content Ends Here -->
+
+            
+        
+        <!-- Side Navigation JS -->
+        <script>
+            /* Set the width of the side navigation to 250px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("overlay").style.display = "block";
+            }
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("overlay").style.display = "none";
+            }
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
